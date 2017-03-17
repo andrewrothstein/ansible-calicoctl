@@ -1,6 +1,6 @@
 ---
 # defaults file for calicoctl
-calicoctl_ver: v1.0.1
+calicoctl_ver: v1.1.0
 calicoctl_mirror: https://github.com/projectcalico/calicoctl/releases/download
-calicoctl_checksum: sha256:8ad0012b4c667d8016071e42abc28a9b6a0a57cb33c2173263b2f7125a65cb6d
+calicoctl_checksum: sha256:09c7bd942774eee5338cd09de652f8ae0259017c9cd8d962d73e8559c4d870f9
 calicoctl_install_dir: /usr/local/bin
