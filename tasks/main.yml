@@ -5,7 +5,7 @@
   get_url:
     url: '{{calicoctl_url}}'
     dest: '{{calicoctl_target}}'
-    mode: '0755'
+    mode: 0755
     checksum: '{{calicoctl_checksum}}'
 
 - name: link
@@ -13,5 +13,5 @@
   become_user: root
   file:
     src: '{{calicoctl_target}}'
-    dest: '{{calicoctl_install_dir}}/calicoctl'
+    dest: '{{calicoctl_link}}'
     state: link

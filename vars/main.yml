@@ -2,3 +2,4 @@
 # vars file for calicoctl
 calicoctl_url: '{{calicoctl_mirror}}/{{calicoctl_ver}}/calicoctl'
 calicoctl_target: '{{calicoctl_install_dir}}/calicoctl-{{calicoctl_ver}}'
+calicoctl_link: '{{calicoctl_install_dir}}/calicoctl'
