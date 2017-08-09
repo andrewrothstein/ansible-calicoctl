@@ -5,7 +5,7 @@ calicoctl_mirror: https://github.com/projectcalico/calicoctl/releases/download
 calicoctl_platform: linux
 
 calicoctl_checksums:
-  linux: sha256:d0a25328433d0e69f48085fcaf00cae9641d415705b02e0de2a6bb4cb4df4de4
+  linux: sha256:7365731663ee0e6041cc6342c9a1fe88c1b22183b2044b6ae8d84bd4b7ee69ae
   darwin-amd64: sha256:93e4370e56a1781a68fc70323aedb0dfe5de267c1830f9eb2dbbf12e8749bfc4
   windows-amd64: sha256:be93ee388879de18a18dbdc8ce10617e1154084ea5920483816663446a83e321
 
