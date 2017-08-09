@@ -9,4 +9,4 @@ calicoctl_checksums:
   darwin-amd64: sha256:93e4370e56a1781a68fc70323aedb0dfe5de267c1830f9eb2dbbf12e8749bfc4
   windows-amd64: sha256:be93ee388879de18a18dbdc8ce10617e1154084ea5920483816663446a83e321
 
-  calicoctl_install_dir: /usr/local/bin
+calicoctl_install_dir: /usr/local/bin
