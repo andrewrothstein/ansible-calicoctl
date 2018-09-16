@@ -1,6 +1,6 @@
 ---
 # vars file for calicoctl
-calicoctl_url: '{{calicoctl_mirror}}/{{calicoctl_ver}}/{{calicoctl_upstream_binary|default("calicoctl")}}'
+calicoctl_url: '{{calicoctl_mirror}}/{{calicoctl_ver}}/calicoctl'
 calicoctl_target: '{{calicoctl_install_dir}}/calicoctl-{{calicoctl_ver}}'
 calicoctl_link: '{{calicoctl_install_dir}}/calicoctl'
-calicoctl_checksum: '{{calicoctl_checksums[calicoctl_platform]}}'
+calicoctl_checksum: '{{calicoctl_checksums[calicoctl_ver][calicoctl_platform]}}'
