@@ -1,28 +1,28 @@
 ---
 - name: resolve platform specific vars
-  include_vars: '{{item}}'
+  include_vars: '{{ item }}'
   with_first_found:
     - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{role_path}}/vars'
+        - '{{ role_path }}/vars'
 
 - name: download
   become: yes
   become_user: root
   get_url:
-    url: '{{calicoctl_url}}'
-    dest: '{{calicoctl_target}}'
+    url: '{{ calicoctl_url }}'
+    dest: '{{ calicoctl_target }}'
     mode: 0755
-    checksum: '{{calicoctl_checksum}}'
+    checksum: '{{ calicoctl_checksum }}'
 
 - name: link
   become: yes
   become_user: root
   file:
-    src: '{{calicoctl_target}}'
-    dest: '{{calicoctl_link}}'
+    src: '{{ calicoctl_target }}'
+    dest: '{{ calicoctl_link }}'
     state: link

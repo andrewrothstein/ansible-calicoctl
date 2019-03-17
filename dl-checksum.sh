@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v3.2.1
+VER=v3.2.6
 DIR=~/Downloads
 MIRROR=https://github.com/projectcalico/calicoctl/releases/download/$VER
 
