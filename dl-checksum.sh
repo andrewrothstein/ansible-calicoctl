@@ -1,15 +1,15 @@
 #!/usr/bin/env sh
-VER=${1:-v3.10.1}
 DIR=~/Downloads
-MIRROR=https://github.com/projectcalico/calicoctl/releases/download/$VER
+MIRROR=https://github.com/projectcalico/calicoctl/releases/download
 
 dl()
 {
-    local os=$1
-    local arch=$2
-    local suffix=${3:-}
-    local url=$MIRROR/calicoctl-$os-$arch$suffix
-    local lfile=$DIR/calicoctl-$os-$arch-$VER$suffix
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local suffix=${4:-}
+    local url=$MIRROR/$ver/calicoctl-$os-$arch$suffix
+    local lfile=$DIR/calicoctl-$os-$arch-$ver$suffix
 
     if [ ! -e $lfile ];
     then
@@ -20,11 +20,14 @@ dl()
     printf "    %s-%s: sha256:%s\n" $os $arch `sha256sum $lfile | awk '{print $1}'`
 }
 
-printf "  %s:\n" $VER
-dl darwin amd64
-dl linux amd64
-dl linux arm64
-dl linux ppc64le
-dl windows amd64 .exe
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver darwin amd64
+    dl $ver linux amd64
+    dl $ver linux arm64
+    dl $ver linux ppc64le
+    dl $ver windows amd64 .exe
+}
 
-
+dl_ver ${1:-v3.10.2}
