@@ -1,6 +1,6 @@
 ---
 # defaults file for calicoctl
-calicoctl_ver: v3.11.1
+calicoctl_ver: v3.11.2
 calicoctl_mirror: https://github.com/projectcalico/calicoctl/releases/download
 calicoctl_os: linux
 calicoctl_arch: amd64
@@ -161,3 +161,14 @@ calicoctl_checksums:
     linux-ppc64le: sha256:b7931c0343fe38bdf4ce46de8e68fa3f2ff342994c5b09a924fcead6f28e37d5
     # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-windows-amd64.exe
     windows-amd64: sha256:7161311ccbff2faf43685e146b906849d42a473e9300a06183081eb851b54506
+  v3.11.2:
+    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-darwin-amd64
+    darwin-amd64: sha256:e131dcdeb7c32c91d0e93b1111726ed3039922db3c6b1a8dea0d0038d8af5d25
+    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-amd64
+    linux-amd64: sha256:06fb4cfbfdbe1930b52aa7b9a985b439f7e3aae22dbc6b2c83d6583a8d14adca
+    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-arm64
+    linux-arm64: sha256:1873ef0c35917e3c9c5633768c02d2020557fe3dc8dda1123a14d1e7f1482756
+    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:ee31e2d94006652259f446035d987e304aa11f86648b7ad803029ddca0ef2ac6
+    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:a6def4b000ded84b82d0b85f407a8739cf88782010e573e8b9a9b462386a6bd8
