@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: download
+- name: downloading {{ calicoctl_url }} to {{ calico_target }}
   become: yes
   become_user: root
   get_url:
@@ -19,7 +19,7 @@
     mode: 0755
     checksum: '{{ calicoctl_checksum }}'
 
-- name: link
+- name: linking {{ calicoctl_link }} to {{ calicoctl_target }}
   become: yes
   become_user: root
   file:
