@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: downloading {{ calicoctl_url }} to {{ calico_target }}
+- name: downloading {{ calicoctl_url }} to {{ calicoctl_target }}
   become: yes
   become_user: root
   get_url:
