@@ -1,6 +1,6 @@
 andrewrothstein.calicoctl
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-calicoctl.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-calicoctl)
+![Build Status](https://github.com/andrewrothstein/ansible-calicoctl/actions/workflows/build.yml/badge.svg)
 
 Installs calicoctl to get started with [Project Calico](https://www.projectcalico.org/)
 
