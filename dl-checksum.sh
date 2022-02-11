@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
+
+set -e
+
 DIR=~/Downloads
 MIRROR=https://github.com/projectcalico/calicoctl/releases/download
 
@@ -13,7 +16,7 @@ dl()
 
     if [ ! -e $lfile ];
     then
-        wget -q -O $lfile $url
+        curl -sSL -f -o $lfile $url
     fi
 
     printf "    # %s\n" $url
@@ -30,4 +33,4 @@ dl_ver() {
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-v3.21.0}
+dl_ver ${1:-v3.21.4}
