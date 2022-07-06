@@ -11,7 +11,7 @@
         - '{{ role_path }}/vars'
 
 - name: downloading {{ calicoctl_url }} to {{ calicoctl_target }}
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ calicoctl_url }}'
@@ -20,7 +20,7 @@
     checksum: '{{ calicoctl_checksum }}'
 
 - name: linking {{ calicoctl_link }} to {{ calicoctl_target }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ calicoctl_target }}'
