@@ -3,7 +3,9 @@
 set -e
 
 DIR=~/Downloads
-MIRROR=https://github.com/projectcalico/calicoctl/releases/download
+MIRROR=https://github.com/projectcalico/calico/releases/download
+
+# https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-darwin-amd64
 
 dl()
 {
@@ -11,7 +13,7 @@ dl()
     local os=$2
     local arch=$3
     local suffix=${4:-}
-    local url=$MIRROR/$ver/calicoctl-$os-$arch$suffix
+    local url=$MIRROR/v$ver/calicoctl-$os-$arch$suffix
     local lfile=$DIR/calicoctl-$os-$arch-$ver$suffix
 
     if [ ! -e $lfile ];
@@ -25,12 +27,17 @@ dl()
 
 dl_ver() {
     local ver=$1
-    printf "  %s:\n" $ver
+    printf "  '%s':\n" $ver
     dl $ver darwin amd64
+    dl $ver darwin arm64
     dl $ver linux amd64
     dl $ver linux arm64
+    dl $ver linux armv7
     dl $ver linux ppc64le
+    dl $ver linux s390x
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-v3.21.4}
+dl_ver 3.23.0
+dl_ver 3.23.1
+dl_ver ${1:-3.23.2}

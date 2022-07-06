@@ -4,7 +4,7 @@ calicoctl_platform: '{{ calicoctl_os }}-{{ calicoctl_arch }}'
 calicoctl_eff_suffix: '{{ calicoctl_exe_suffix | default("") }}'
 calicoctl_exe: calicoctl-{{ calicoctl_platform }}{{ calicoctl_eff_suffix }}
 calicoctl_ver_exe: calicoctl-{{calicoctl_platform}}-{{ calicoctl_ver }}{{ calicoctl_eff_suffix }}
-calicoctl_url: '{{ calicoctl_mirror }}/{{ calicoctl_ver }}/{{ calicoctl_exe }}'
+calicoctl_url: '{{ calicoctl_mirror }}/v{{ calicoctl_ver }}/{{ calicoctl_exe }}'
 calicoctl_target: '{{ calicoctl_install_dir }}/{{ calicoctl_ver_exe }}'
 calicoctl_link: '{{ calicoctl_install_dir }}/calicoctl'
 calicoctl_checksum: '{{ calicoctl_checksums[calicoctl_ver][calicoctl_platform] }}'

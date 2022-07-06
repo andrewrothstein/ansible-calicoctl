@@ -1,548 +1,75 @@
 ---
 # defaults file for calicoctl
-calicoctl_ver: v3.21.4
-calicoctl_mirror: https://github.com/projectcalico/calicoctl/releases/download
+calicoctl_ver: '3.23.2'
+calicoctl_mirror: https://github.com/projectcalico/calico/releases/download
 calicoctl_os: linux
 calicoctl_arch: amd64
 calicoctl_install_dir: /usr/local/bin
 
 calicoctl_checksums:
-  v3.2.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:e9e225bd0d37e08605cd3c453c3107445d150a5ffeb0d6fe6e13dbd942001e76
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.0/calicoctl-linux-amd64
-    linux-amd64: sha256:b0045e3f235d42618c3f4f6ec3e58715980995e2fab2424b39787cd72986a11d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.0/calicoctl-linux-arm64
-    linux-arm64: sha256:8696e9e11d572258c3472beb173730edc8f2c90516eaeda1e69b34601351b927
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:60b038e528a5c9af8f2f813f0a1b4994347c8452e795c3b4dc647431287dfb39
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:92dbf6168c4b374b25ca54d98f8bd3f5cae29714797e1c6f52ea61ab4087cddf
-  v3.2.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:a9c8756dc8ac03a8739dfd598e26e3412ba3560f13a4a85f03dd1dc3fcca153c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.1/calicoctl-linux-amd64
-    linux-amd64: sha256:230ae0b818b24a7522a9880ab1fbe9af60ab8584f63d991bafa40851096cc2ce
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.1/calicoctl-linux-arm64
-    linux-arm64: sha256:9a8352a4032f7e90ee63dec8bca1d28b9052b9af698c29749b3231b4180804ba
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:6074ff3f03f3c3a202ec01a4ba07ffcd12e277149bc041297046893744da819f
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:0bb5eddaea45754ebec52bb79c4961a148bbba99f45341031c686432359b0a1c
-  v3.2.6:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.6/calicoctl-darwin-amd64
-    darwin-amd64: sha256:df03f31c049db41a612505508e99225466dea838784cb363cecf50c97afc298f
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.6/calicoctl-linux-amd64
-    linux-amd64: sha256:beb0c1a2aceb9e9c987b2c55d5d24b130aa75b4f5dfc0d19ead7c28aa434fbf1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.6/calicoctl-linux-arm64
-    linux-arm64: sha256:e406cef4eea70b4703f86a5802920ce391f19919da3502fef3a1a21283f68777
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.6/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:4361dd2e6016f7cb1066fc44e2722df29bea4f2f985c75eb3c9cd4219922e86c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.2.6/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:291bd1efedc033b1aba037acb9642c1f37bccd30c82230e6f7cb279a312b8b86
-  v3.6.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.6.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:d174d1180ad9d851d647c1e96afb8f308474406b70ceb0bd878b2c9117329932
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.6.3/calicoctl-linux-amd64
-    linux-amd64: sha256:2fb8ca57349b0ca96fc1db64bce02e1b2ddf4f97e3392d90dac890fceef54e23
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.6.3/calicoctl-linux-arm64
-    linux-arm64: sha256:631fe8164639bd64ca1b0bcde01fbc5f60563beef70d64503fd77e7679002122
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.6.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:dff481e1eb44c9e74187be20983d087fd0975c7818434ab1b225c0f3deecb9db
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.6.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:d1cc36e7e41e9bd49a3a3bca642f341283c1d238c68c22922473fd32a8b6de1f
-  v3.8.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:79dece91128162660d255bd92b0b3007c796791876bb62456d4d6a2466d7e4b4
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.0/calicoctl-linux-amd64
-    linux-amd64: sha256:e4074ba195baa36955f378998f0bc7f3486580a7999c9038ce9bfcd1430592a2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.0/calicoctl-linux-arm64
-    linux-arm64: sha256:4661ff4d2ced9ed2c0174e3ce4ce512cddeab442db4f39dc5b84b81fa4a35716
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:07c46de8e4538ef927c9204a0aa017cdbc99c5aa57fe5806dd016d2880522dd6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:048936bd355c64c7f7162b8f911a6150a939f1d77603f16e589c457c78653e9d
-  v3.8.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:be5bb6b28f375bd377d2b8e35d54f7b59513e7547a0f3f09af6491250adcace4
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.1/calicoctl-linux-amd64
-    linux-amd64: sha256:e94275f80ea2e087734113711221ab359fe00f8e2c66879b867bf36e2d885968
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.1/calicoctl-linux-arm64
-    linux-arm64: sha256:af79cdf9ddd53e87893b7c95b5116451e017b62b4f4a856f6dc9b98ad4a6d3a3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:a1dd8c1b32946c1ea0293cd8aff314f0fc78fba6883fc5c2fefa2005f8e20735
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:92827ffe7aff09e31f9437f8fc704a0db4e7fd9459e6dc6a33527aea7633cc95
-  v3.8.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:9a5a4a34344a16a832649c90a994bcb849a1125429cf818fa0183fde14cdb7cd
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.2/calicoctl-linux-amd64
-    linux-amd64: sha256:66570176fde6afe60a9a5673597ca0703e2d4245a284aefda47cd23ae385883c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.2/calicoctl-linux-arm64
-    linux-arm64: sha256:286ebaf44ebda02aa7bcf282a12c0b6b0529cebff718b733e955e4a8b28b3e3a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:b367abb65785e144d8b690ca408e72bac93cd774ecc5aca385ccf55b23d70f87
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.8.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:d1d1bf5d31ca1338fb145f11256731c04e13d5095392ed3683c59dabdbfe6570
-  v3.9.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:a36581feb03cca79efa0960a0e6fc60f677dd2e70f108806cd75b526653eeb9d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.0/calicoctl-linux-amd64
-    linux-amd64: sha256:513f315b2bb111cfd81b438ef52ef3cf0255d2921ef6d8a2ad29ab2b26eaf7d6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.0/calicoctl-linux-arm64
-    linux-arm64: sha256:8cce9446d11d0e39345c79b11c973afa6953f13b0c1425f67edbcd7679d9d743
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:bdf013c16c949e9e67833368fe1248e57df412b1ecd842acbbf0c86f10a077c5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:b889b36cb55371faea48680ac8a750234c04d1e1a8e4c8241415b99fa7018854
-  v3.9.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:9d3e4f3059f439ca69f6c4be44316b1cc648b728d6e2144f8db432a5fd142418
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.1/calicoctl-linux-amd64
-    linux-amd64: sha256:d609a3d6aed16a56afd64d56f8e82fc7b1d231fc6a7b77cd762d1f8774e1db07
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.1/calicoctl-linux-arm64
-    linux-arm64: sha256:7789fb63a6a5b6b3dcb17ffa3b4e7285e7e6fdf7d60c5cc5905bf1ee8cd06e6b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:e16992c88466cc851a23f17c02da5eb3501e36525029dcad751e85642c347c37
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.9.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:9e15774aa8205e87fa916622f4da245ad30436a4cf4a21028f83b53797e68db5
-  v3.10.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:02d8538b43ba923b7fdf364aefffe8063c05ad4be1f807d075b18604f107013c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.0/calicoctl-linux-amd64
-    linux-amd64: sha256:70b4d1f0c8a0096af073574ac81d82ee5ceca834c78b46ef39236f659380387b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.0/calicoctl-linux-arm64
-    linux-arm64: sha256:818e2b15b748607aef1f77d383ef3858f05e208758c35b8a3e986d6ec03af14e
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:8eb9fd3ffdb188ce73f2de22536cb89e7a9022eea7da53eed9eaab1cd8e353d9
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:dc1bb08eee3165ac12cca702e5ac5bd82f3e98202d71ed4b8423c4c83afd0d0c
-  v3.10.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:6eadf2b78800904a6934b51e2a2786163f9c1ae2a62ab3738f8c6de8d5e69f69
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.1/calicoctl-linux-amd64
-    linux-amd64: sha256:fe063db4eefc605cc708fee3fb1f9f04f01a451f52546e2de2cf28b6239dc328
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.1/calicoctl-linux-arm64
-    linux-arm64: sha256:c1a694760f964cccb1138f96cdd0faf232b7d315d3e6c78698418b4c7aa822c1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:47f409252285a00671d434f8609bd44377876eb8e9805c1372585069e38d5eb4
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:ada42f909be7370e2b5957cabb6ffcba59aada045796d51aab51cb5400d9d5c2
-  v3.10.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:e00516926f8f33c3e6421bc781ae1506df301eab371d564576b634401d0e7fd1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.2/calicoctl-linux-amd64
-    linux-amd64: sha256:8226ba72868163fc05661967601e96e07cf34b7ba625cb9317bd5f3f02044d4f
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.2/calicoctl-linux-arm64
-    linux-arm64: sha256:66c635abd3c87d6e26d12d3350f7af6e1129ffc90480a5da29115d0da40e1d01
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:1f05018f90d22705ed211bc2912263dc2191280d44610e1534f69ba079cd20c2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.10.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:f126537aac066ee7a44dc17152b871430e2ceed54e5cb8661f6a2e8c4d1f1236
-  v3.11.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:f34279762fdf749c00cad26d1bceec06eff3b1ccbbffcd8a3e87a9f30941e663
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.0/calicoctl-linux-amd64
-    linux-amd64: sha256:f34279762fdf749c00cad26d1bceec06eff3b1ccbbffcd8a3e87a9f30941e663
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.0/calicoctl-linux-arm64
-    linux-arm64: sha256:f34279762fdf749c00cad26d1bceec06eff3b1ccbbffcd8a3e87a9f30941e663
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:f34279762fdf749c00cad26d1bceec06eff3b1ccbbffcd8a3e87a9f30941e663
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:f34279762fdf749c00cad26d1bceec06eff3b1ccbbffcd8a3e87a9f30941e663
-  v3.11.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:4863bff519211089f6b886c0455a2b9e3be179a4e1c75d86db0214dde0d96609
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-linux-amd64
-    linux-amd64: sha256:045fdbfdb30789194c499ba17c8eac6d1704fe20d05e3c10027eb570767386db
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-linux-arm64
-    linux-arm64: sha256:770e0fce9acf1927726d64a885f8350d44a3fcbf248017d0aceec58bd41fa1b8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:b7931c0343fe38bdf4ce46de8e68fa3f2ff342994c5b09a924fcead6f28e37d5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:7161311ccbff2faf43685e146b906849d42a473e9300a06183081eb851b54506
-  v3.11.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:e131dcdeb7c32c91d0e93b1111726ed3039922db3c6b1a8dea0d0038d8af5d25
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-amd64
-    linux-amd64: sha256:06fb4cfbfdbe1930b52aa7b9a985b439f7e3aae22dbc6b2c83d6583a8d14adca
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-arm64
-    linux-arm64: sha256:1873ef0c35917e3c9c5633768c02d2020557fe3dc8dda1123a14d1e7f1482756
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:ee31e2d94006652259f446035d987e304aa11f86648b7ad803029ddca0ef2ac6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.11.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:a6def4b000ded84b82d0b85f407a8739cf88782010e573e8b9a9b462386a6bd8
-  v3.12.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.12.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:888055c5559f77a63b1d9fec5cab34e7aab0e034957ea91b0669fd59e006b58a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.12.0/calicoctl-linux-amd64
-    linux-amd64: sha256:5b9a7d6bb7be9b6fa49875fe3ab1239a177c6856b1ea8566eb2afbc7064cd495
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.12.0/calicoctl-linux-arm64
-    linux-arm64: sha256:8c8fa51a80e2226d145bde88f1228d53ee08064dc5351667fb89398af54d9afd
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.12.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:2871553ba7c4c06fe97d6cfc51e650d383439e5e97b8c9383c633cea4f9ca572
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.12.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:0ec097b101f629cbdcd2f768469aaacea0087854816adf562fc29a7fbf0dcc61
-  v3.13.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.13.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:1c0028d3b31fb7bcc144a9b15b4733a847582552ae4dc10d07184c58b3a3c89a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.13.0/calicoctl-linux-amd64
-    linux-amd64: sha256:1abc6e3a825e6c3e95e496eb9ec57aa431be636b3ec95df1fdcfea77fd871cf1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.13.0/calicoctl-linux-arm64
-    linux-arm64: sha256:6ab6672f77877ad950dd946e0b6455ebbe02a884813289bf883c9be37706f0ed
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.13.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:ca235335310419ff8a783e268b8e00c23a403709f161d27cc844e21d8c148f84
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.13.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:72c39e46fd69c41adaa420ea79a071b81dfe7d1894196f6031602f8ba7ba0fe2
-  v3.14.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:bb99fcdaa495a6a96aeef0cb0fc7c0de5aeff13ea02a9efd9089536c88b17bc2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl-linux-amd64
-    linux-amd64: sha256:4e38c7e81653faf3659b0afddabde4dff736bb1b4cc59ebe238907a9641816a7
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl-linux-arm64
-    linux-arm64: sha256:14272da8dbb82c0f823fbb50a88d4815513dfafa20a7e33f635a8068ae5b2db6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:99cc28979212bb65dc5866c4ce6622a9b479dddb4dc0ad3e21b9645d4353e94a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:26d19c355aa39fbbbc2ca78a24cf1a6c9cd3df47fa931396aaaceab143e334d1
-  v3.14.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:39d7d719e0c64090912c759630b7057e6a55c844c933b498f0640d5913be3508
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.1/calicoctl-linux-amd64
-    linux-amd64: sha256:5fe8a7b00a45cf48879eff42b08dcdb85cf0121f3720ac8cbd06566aaa385667
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.1/calicoctl-linux-arm64
-    linux-arm64: sha256:326da28cb726988029f70fbf3d4de424a4edd9949fd435fad81f2203c93e4c36
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:e7facb7732c2460ebd6767872e33b2b3728f77e9277b0810de3441810a7c9fd8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.14.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:41a9b4d9da20bb4c2118bdcc605c88de41a994269ade34c225f68ee6fef7b816
-  v3.15.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:1002392afdd86233c3d1e18c4d7782570cc5ae56f4ac367665d3219ce087f049
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.0/calicoctl-linux-amd64
-    linux-amd64: sha256:4600d5d7f08ed9cf479fc8fa87518dbbca32a473d0a4a212cfecb610c18216aa
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.0/calicoctl-linux-arm64
-    linux-arm64: sha256:9b3d000801987599bee58e0dc4906d5cde87dc9dc4c9b410097a9b1c19e916ba
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:fbfdb589fae74ab7534071982d817d5df73794f7105c847e64ab385d8581eca6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:eef260ead7ba23de70b7cc50b96acd22556f5e4c7b0b945a67805a6daf1c9b67
-  v3.15.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:0526f16c5172dba2e322925d6dc5304a6406b98e23eb3b03c601529b53df61ab
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.2/calicoctl-linux-amd64
-    linux-amd64: sha256:219ae954501cbe15daeda0ad52e13ec65f99c77548c7d3cbfc4ced5c7149fdf1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.2/calicoctl-linux-arm64
-    linux-arm64: sha256:49165f9e4ad55402248b578310fcf68a57363f54e66be04ac24be9714899b4d5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:928b7bcd9396f42a83bfbb0f0a0d3a910ef66c22679f1988404b3336b4185898
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.15.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:e8d770c423d489f0c1ba09ae550d0dca1a58a5f7c94011b692a7a4a0797fc281
-  v3.16.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:4f4d1717c75ba509aabde808b582b087f714756d322421cce45c4ca9cb3078e3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.1/calicoctl-linux-amd64
-    linux-amd64: sha256:7c33a841fdf85409c2eee5b287e1212d6c7e82885ec9ffaf690b6019b7b80c1b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.1/calicoctl-linux-arm64
-    linux-arm64: sha256:d3cc8b721a862f0c50273706bf6d38e47ee9b932b8d90a0f0e51280594a6f242
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:89b7b93f8f7292174f3ae655476215db9e5e753bd4e106b5f244a33d8b4b2d4c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:6e0fa75821488d4ed8ed2cbfe5c58d87677bd2ed50316019bb29e42e099f1d98
-  v3.16.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:1bf1ff7eb383a648651a014cab4678e90aa26fc28d6ee888c8a0b2f62ef9791b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.2/calicoctl-linux-amd64
-    linux-amd64: sha256:801b059a4fd0dac8795693026c69a79a00dd2353eff597cc36b79fcb6ec53a0a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.2/calicoctl-linux-arm64
-    linux-arm64: sha256:aa5695940ec8a36393725a5ce7b156f776fed8da38b994c0828d7f3a60e59bc6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:aa1c058b8c8b6ef963b89de4315a425b15c240e566ef61293a32f9fdfc42a5c4
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:c947fb1caf601ab9e38097337ef2a47c839585c6f87cc7984382b24ce1972cec
-  v3.16.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:4e1f9934521388af150c543e04716d3c62a4133b1e72bb79ed3bd8239bd90d3d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.3/calicoctl-linux-amd64
-    linux-amd64: sha256:cbed6fa78cc95dc6d37862f350a90ea11283a8ccb3d0368ae5bea7e8d90f8cc3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.3/calicoctl-linux-arm64
-    linux-arm64: sha256:c64ed52e5db6c7722f2567c1adb472cb3488b1e58baa4fd271bb2457e01f9488
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:40edb1980c3a0c4b7203fb07cbeee1f486f437465e0c17a3435f77eaa2457bb3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:6cfd0c65e3118092cfbc71a12c072efed6a45d6c22eeb0cd4589a530f16c2e47
-  v3.16.4:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.4/calicoctl-darwin-amd64
-    darwin-amd64: sha256:4fa147a6493acd483611710f47d813499c1025ecc1a8f2cfaaa27b75e07603b8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.4/calicoctl-linux-amd64
-    linux-amd64: sha256:a502749420e7424090a73644a8bdc1270c6ef679f8f1d33f753d48d60c930377
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.4/calicoctl-linux-arm64
-    linux-arm64: sha256:003f16a501e876af0da67324b7fed6ca72f5547c15bbe3b798a8eeb707056d43
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.4/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:95328f6cd5ca1aed6c9087ec3c1684b9ec105d16a704a04830e0cf25deedb040
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.4/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:b757a92495b468a2c59efcfba15e2c484f57ef052abb2302ee1a704dc50dc85e
-  v3.16.5:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.5/calicoctl-darwin-amd64
-    darwin-amd64: sha256:34e27f855183a6780ed7d4641930ee02f7dbcc8eb5e506df1abebc57d6108d05
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.5/calicoctl-linux-amd64
-    linux-amd64: sha256:d4175559ad0cf69a1352be3d824ae0a794305d6cd5b17ea0ffc6a153b21d2ae7
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.5/calicoctl-linux-arm64
-    linux-arm64: sha256:230579d8761e1cee5ffd447af5a1b92af76ed89f6b7e51771d590017aca5cbb9
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.5/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:5f57ccb9491277099da8cf4eefdd5fe52f99685d125598c241bda8295569b91e
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.16.5/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:71a78a5f90707e1c11446e7d83b316e4706d8c2cf26a93bd5ebf1237dfb68e39
-  v3.17.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:248e2c884c1697ee67ccac2c9b750ad734f2e2ac4a6785c14f300a94cdecea72
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.0/calicoctl-linux-amd64
-    linux-amd64: sha256:bf2351437f1160f67cd46bbe391fa536b23ba67f8641f60ae95a8b34b307f29d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.0/calicoctl-linux-arm64
-    linux-arm64: sha256:d9a50f896bb7ae0e63d6bdf5236749149428ec98d7550c1739e8823d7b743590
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:334a9e657c1a5f180a8183f7b98ecf7b809f9553d6d212221a585ec719c13dbd
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:e0a1dcacef34f7247fa4885b2a8c20b5964c3a808cda0f12a51e0e93c537c59a
-  v3.17.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:2808eb67e9c140a4e527cc057a8245b8dfc75439b5830fbc3b79283d40a8c697
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.1/calicoctl-linux-amd64
-    linux-amd64: sha256:6fb8ed009a3c1ab49bba0be65609242b8a641ffee262da5e7dd954753054de66
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.1/calicoctl-linux-arm64
-    linux-arm64: sha256:808990bd66e68066c59b690de1dd935b93f4d2252e93868e838bf9eb5b9be178
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:469fa2318c24101d16bdc157708b9c6929691178910d5bed34a7e72e9a60d791
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:acadb6782581aebab3145346c7dfd73746e49a691686e94d220264c4b8517735
-  v3.17.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:944370b1637d6f35f2256d0f6ae6f926386c9f3719700bca972ed0da0ff34f2c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.2/calicoctl-linux-amd64
-    linux-amd64: sha256:27655d2f7138a40fd8b4d9f8e4e9edea73549a4db469732f3d05742ce52f6e7e
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.2/calicoctl-linux-arm64
-    linux-arm64: sha256:e7f35657f8a0d2a3540e0d7a2bc2eac02ca16b616852903d9c8525842d8ef506
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:0aa74465c92f3ff66d0f97ffd3e1a1871c6ba8ed54074317b722adb6e28ae9b5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:4c8551394c66a58b2148edfcdb3b332331e641b6496b246c341dc316c58fce1d
-  v3.17.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:abefc0782c6cc6ad33e7177c294f21b0440b06515bc4b97e7a46c937c369df6c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.3/calicoctl-linux-amd64
-    linux-amd64: sha256:c9ce1358694c251ef5f4d65e60255dc8d1376bb13c73a42a61085a2dc435465b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.3/calicoctl-linux-arm64
-    linux-arm64: sha256:773288bb8d4580bd7a248e05bdd7140693a4ab3c29b1930f02c2e77189356034
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:35d347b058b6030d9a34111038612ba5bac4e77446df30a1b49b1de66b0459db
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.17.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:cdae1b22a6eb1e062248d72b9543d1eb065427f1603df4c9b8974f79b5cb26bd
-  v3.18.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:f9540b4ed1c3b73536f268e1d24344eb39963c331ca5f2ddf54158b3d304a43d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.0/calicoctl-linux-amd64
-    linux-amd64: sha256:7152bdda15c9fd2c4723004931def11989e20fa0884f4fc45ae8b61cc836cd19
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.0/calicoctl-linux-arm64
-    linux-arm64: sha256:48ad67a42b47e9636176fd251fbb5564d6b6bccbf12f471bc5667cdb545bc3f2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:58460b23631b92ffe41a3b1a462be8e654b8e10d82a06dbbf1f8feb7975e09d7
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:58f7921ced7a790239681a84b9fc4ae46e95689c9d6ad1a8e00b3337684b794d
-  v3.18.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:b892d2d002ef6b3cff77dcf90ddfe6a6e9d39020e781b5fa04e40c2ac5e535cc
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.1/calicoctl-linux-amd64
-    linux-amd64: sha256:29d0dc67458c1fb8950b5c157de41045d4f502eb80791d7858c7a6252c2390c1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.1/calicoctl-linux-arm64
-    linux-arm64: sha256:2ba81451db3ef49708e2344f318fe60662bd344f91fd1a85ce1c5e8cffa830fb
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:ef2e96d561cb242eae76f57e5c5daac5da31dc6554a143911316b972ceb9e5b7
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:8151bbc624e5666d076d9afee961bcb441945dc63e95a4a6f0265952dff50201
-  v3.18.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:4b52f50540ac4adc2a33a6e0f2af8d99271161e6537086abb152e076d3da61c8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.2/calicoctl-linux-amd64
-    linux-amd64: sha256:ce43cdac61761778cdae9c2f70a3e56cacb935491fa8a41053bafd3b1f1d6d08
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.2/calicoctl-linux-arm64
-    linux-arm64: sha256:cd814f60e294b7732fad60ff23edf4127cf3fe05600536c26b7e1099bd3802c9
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:073124dce1761576b40db941dabe53275e38f18d39d9be72079ccab3bd1790fc
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:1275f028547f6b421a9b3a708dbf8f08c3034a01772308a87236556dca158d05
-  v3.18.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:ef354787cc7e8c442c2d0c552a05015550514460c51cff988d014fbeaa7d61e0
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.3/calicoctl-linux-amd64
-    linux-amd64: sha256:03c31b84c99f03e2c5118985da502bd7c492461e8180e7cb00fb8a98fdd9aff3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.3/calicoctl-linux-arm64
-    linux-arm64: sha256:24e9f847a4b8677322c087e9ee878aa85700909a02629001d2fe48b37f48c65c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:af821acdc06bb434bc951687c6c77a5b964e99ff3e508b25912f8960e0e07f08
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:51ec7b73989afea72a7cc004d6483dc42ab9a82ad0dc01f9e07be3138357d355
-  v3.18.4:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.4/calicoctl-darwin-amd64
-    darwin-amd64: sha256:186c7dbe46e17b95f34a3fb2f3affd16e153c6c05c216816c732b3f520c47022
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.4/calicoctl-linux-amd64
-    linux-amd64: sha256:6ae74a5b9478476c957d4ed4a07ce059521b0c1492aba45f7d59214adc9b547a
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.4/calicoctl-linux-arm64
-    linux-arm64: sha256:0dd24c2c561f4ea48134143464dc9fa6a5fd9917b7a00b5e2da12baa98a83b6b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.4/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:af6f6e060deee99dd2c604c8266d8e2c15681fdcc0ce382dd9be48942ed7f3b0
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.4/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:a458faffb1f3ed9ffbcbc115da70f392991600df291ca00c44eb3e91bf45ea00
-  v3.18.5:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.5/calicoctl-darwin-amd64
-    darwin-amd64: sha256:827e144fe444ee917e9dfba16e4245f90d4034437ffcda45b52a61382e50c5cb
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.5/calicoctl-linux-amd64
-    linux-amd64: sha256:e5f810642c171dd80322529d1fda3eee6179010068d6c624ffad2c48311825ce
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.5/calicoctl-linux-arm64
-    linux-arm64: sha256:2080b2cd8efb71df98dce8678edaba8fce9252801c4b8f987609a4f4d6ddb4e2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.5/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:7f8f41156b0d3f576356d8f76ab62242d73d265e23a3162840487d122cc6c264
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.5/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:c546a518c92ad166add392f59dcd08637b262579573153141807a92196a84f3f
-  v3.18.6:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.6/calicoctl-darwin-amd64
-    darwin-amd64: sha256:50198d732199ab87902fa4bd0710e4bcb271dd4a81edef1b09c6e65d7318d95c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.6/calicoctl-linux-amd64
-    linux-amd64: sha256:0306c2e82d7c77d53d3e1bc3d826c01bb670292562c1f2287b80738064710665
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.6/calicoctl-linux-arm64
-    linux-arm64: sha256:2990c2004d9b9ab6cfc913fe0ed521c12d7b5a3f3fcf4940549a8a15721e84dd
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.6/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:389ac7798b4d4713429cf256d47d9ce7e46f2d49a1c4b06f9b77c2c8ae212617
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.18.6/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:1fa5c11891eb2ffecd2cb4984791e16a51a26466e86e86e17c12182449c74e11
-  v3.19.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:fc1f11b80482b9424e919b7df5ab73e30a7fc4f41ae29bc76db056b8d7c294b4
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.1/calicoctl-linux-amd64
-    linux-amd64: sha256:e50980e9ceb6e3d37751cba2d871d76264c702c205824ae53584c97e2ad726fc
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.1/calicoctl-linux-arm64
-    linux-arm64: sha256:0bc3cb144deae5536065f48267ad80a340b917b9304bb20ef3ef64ef323372c0
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:23096d53702c5c6c982165ab8689eab6dd59a3e6096e36504fcf5f6dd387e741
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:f7141bb3174d2e9a82ddfb67206b1f23d1a6f9158e7507c619fadf863b62cf70
-  v3.19.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:ea8f7f564ee64a1b88c7333359498e104f325ce118059a2ef47aa5e27d289e04
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.2/calicoctl-linux-amd64
-    linux-amd64: sha256:33d5fe72c4ad1a0300b4a8f8cc22a78a281379dc9b7140d7dc6db4e3a0637da8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.2/calicoctl-linux-arm64
-    linux-arm64: sha256:2ff17ea293d7637bcd58838380f4782842788191da1932d67400228af3314a69
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:40d4ae757ce473f0c0d04fbdcd52d85c72b9d838d09013e8076bfb5e2a3b2698
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:377f365843ec5cc931a64cf25b4d06c3c1b7f97386ed9bc6d3e483c77e5ffbb9
-  v3.19.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:68b8f5251f7dbd48ffc1f5741428ea54e8bb28552a62981c8be705c17ebb4747
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.3/calicoctl-linux-amd64
-    linux-amd64: sha256:e9d91036764ec24f32025c3176efb2c2673b9936270e6165fb6583cce97bc43f
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.3/calicoctl-linux-arm64
-    linux-arm64: sha256:ec3cfbd2dccbd614ac353be8c9abf8e336d8700fbd2b9b76da1c3c4c14a6dfe2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:ccb66efa2f01dfeee421ab35650458cde980faac57357a7fe314ce0714786b0d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:338b56ab04fd0fdc3e089e3f439aa1505a5508d5465913a2d4c8e068bd136ede
-  v3.19.4:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.4/calicoctl-darwin-amd64
-    darwin-amd64: sha256:1e3c09852e764d4c5853b46469cf4b22f5741bbcdc84f5ea87b170cc145420f5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.4/calicoctl-linux-amd64
-    linux-amd64: sha256:1b2ac701b05b77a14e0545a7d70915792ce833eea875f7eb7a18ded5a5878d5c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.4/calicoctl-linux-arm64
-    linux-arm64: sha256:50fd7085a6810efd88385df13ad2dfcc0078cd3813ad7bf56b2eb9f18fa7bad0
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.4/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:d2cbc2e987859564f618c749ce7cf01b754683f2a6fc4e9e873cdd756404b48d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.19.4/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:f6a28edb8f1eeb7d332cfb0346ec030a728cf6ae1cde5bef2a44b3e3f8202d6c
-  v3.20.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:6751f2b5797803857ea29f57cf13bcf6335e6ce0f5af7cd6754c4c037af537f7
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-linux-amd64
-    linux-amd64: sha256:5a1462e3d9c5bc3142b14788b5be427fae962863397a0176241afad02308f1a2
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-linux-arm64
-    linux-arm64: sha256:9594125583723c9c631659ebfa00d76f66084a36af87eb08a388c1e614cfd741
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:f9d02271fc225227460b1cd478f4d8cf6daf284871dfe9c38de6efcf1540c61c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:eaefe0d00b4237d497019be75b09ef5f9118de8754acdff7edbca64ba221686c
-  v3.20.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:309480be6a310d1620fe05c5190b4b066bb33b8d61b076abdf2ea4c20feb4dc9
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.1/calicoctl-linux-amd64
-    linux-amd64: sha256:2d9367f9ae81bb4bb677b991e2a558012e35a22607f32dd3898eab71f8f5a01c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.1/calicoctl-linux-arm64
-    linux-arm64: sha256:73dfe53573f4eaca73ff2f90bf546f8f2fad8825f80f81a1dc11d2fbd7acc14f
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:671659e7a2b8fde4894aca33bc6e5bf94186f0605c26470f6a437a1a2a1ca53d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:90ce6bfd46cbbe22b6562490177af2ebe22ae90d362c622ea72399449dd72207
-  v3.20.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:15e62760bde6526d4ea70839ffea627562453de1fd9e9399e30dce95dd2c28a3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.2/calicoctl-linux-amd64
-    linux-amd64: sha256:532b6ca6eb4b9e8f9656ba2c01e3cee24a11b812e360ec6eb540fab8ff908b65
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.2/calicoctl-linux-arm64
-    linux-arm64: sha256:69f77dbbeccf94b9d7ed2a321345485e6e5dfdca36da070317b1e5336e054645
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:186131fbcb423bdefa5c592c58d46ebc7cdc642ec071f921d50ecf22d0064fd6
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:9fd481e449184b33edb669faf2ea0c1ae640dfbb406630410fd6fa9be528e2ac
-  v3.20.3:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.3/calicoctl-darwin-amd64
-    darwin-amd64: sha256:c4d17139510cc77cc0098eac3796976f5e963b575c63810c3ba71cab50eb5584
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.3/calicoctl-linux-amd64
-    linux-amd64: sha256:29bec97b1dfc135b830b0cbfd3dfe216f00e97e9e6ef08e620d81d4a09db6393
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.3/calicoctl-linux-arm64
-    linux-arm64: sha256:63683f21515a20ceee8f234a9aba0e5efb342860940026d0ba6f281cc76aa1e3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.3/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:d8b2a383a490ef6327ce99a3858ac322982afd47c7884411fa06471da7425028
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.20.3/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:bb34f862c8747cc54c794b4d21465ebbd092ed5a0d3ff88bc632c8c9a2c5c069
-  v3.21.0:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl-darwin-amd64
-    darwin-amd64: sha256:6d9a9d2b30e29948de1647d06c7ae87625ca2d75522d54653cfe20ae55b53902
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl-linux-amd64
-    linux-amd64: sha256:7533b33d98c8e3f035a22537c7885c1bba64dcb8107fd6bb83286dc6319bbd59
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl-linux-arm64
-    linux-arm64: sha256:b84690f5751eaba0408843d4ee3ac17dbb6771291409d9c14843be928f07996d
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:dbe31f171806f404690fcacda64cc748e871f943d9be7ffd39744ba76870746b
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.0/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:f50e5b2523dd25d00343b723d31df0f2227d2f96f6627cef899703833a8766cd
-  v3.21.1:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.1/calicoctl-darwin-amd64
-    darwin-amd64: sha256:68e6412b2426fada790f59e7324e97d0e7e3e5adfe6d844a67fb8cbb76824b4c
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.1/calicoctl-linux-amd64
-    linux-amd64: sha256:a3383ea8366e58180c0abac2761cdbef3c7a5332361bca083fdbab727d8ea8d5
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.1/calicoctl-linux-arm64
-    linux-arm64: sha256:8a87d8f04a871e9b09074d033b3973c0f354e6a5e68b211af6d6220b4ef5b6a8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.1/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:d98f1689b66d6496a406bc7f36a047f0bb6a1b3825dfb529ea7354351ca5cd12
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.1/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:c2ca23f35e5aa04cae3f57fd3c9962d11f30109d2366bd0ed6d0d9a076e85e7e
-  v3.21.2:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.2/calicoctl-darwin-amd64
-    darwin-amd64: sha256:eed5165836aff1bd9be5e860542530b952a924a19c493eeaaf891d662a9a1a71
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.2/calicoctl-linux-amd64
-    linux-amd64: sha256:d495edfc254e00f008ef6872422a31ef5f442a1ff96bcb724dd2df86ef75b7e3
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.2/calicoctl-linux-arm64
-    linux-arm64: sha256:94c1bec6b7661243f053314d901df54d2e3e5bf4eb746af09b29b07e4654f4b9
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.2/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:1c1c8a6887bdcc8d49a93fc3ba6aa538b167088f4fea436af447e84b555fe170
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.2/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:12a0f9bed7f759f0cdbd53ceef7d14f259fb6999cb8390200384be6360ce94cd
-  v3.21.4:
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.4/calicoctl-darwin-amd64
-    darwin-amd64: sha256:8c3fab12509b0c7d72300cc4f1ead212f42fd3dbb2cd412c9c8fdd70f39b6f13
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.4/calicoctl-linux-amd64
-    linux-amd64: sha256:3fb4f31bd72f0a570f6a6cf71d7b4c7641a0f142d2239fad32012058f0ec63bc
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.4/calicoctl-linux-arm64
-    linux-arm64: sha256:5c277b8de4c069f7cf8bd87e02709eeeb668e3a1ca4784aafcf83cdd05568df8
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.4/calicoctl-linux-ppc64le
-    linux-ppc64le: sha256:29b4e2fd9131e01343d4804b1a14eb09a1d50146d54a139a35eb4030e521a5b1
-    # https://github.com/projectcalico/calicoctl/releases/download/v3.21.4/calicoctl-windows-amd64.exe
-    windows-amd64: sha256:133303b001222927dc14a2b1b4b112d7aaa49cc2b85a27915d0d5de3a8511033
+  '3.22.3':
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-darwin-amd64
+    darwin-amd64: sha256:9c19a4cde1aa663ed0b6585c30541a61bbbaaff0bd00ee6ed9ba4d7e162b4b10
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-linux-amd64
+    linux-amd64: sha256:a9e5f6bad4ad8c543f6bdcd21d3665cdd23edc780860d8e52a87881a7b3e203c
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-linux-arm64
+    linux-arm64: sha256:3a3e70828c020efd911181102d21cb4390b7b68669898bd40c0c69b64d11bb63
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-linux-armv7
+    linux-armv7: sha256:512e6575480426ed4ec558aca1eeb6669429fb2619617822cf7277447ec47c65
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:7c2fe391f2a18eccff65c64bf93133dc5c58c7322cbd31ea207bbfef5b563947
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-linux-s390x
+    linux-s390x: sha256:2a9a21f8668234f70379da577341a5e4e13fda1bded17a90315ab1ee59c09f36
+    # https://github.com/projectcalico/calico/releases/download/v3.22.3/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:d9d75c35c60d1af7ac6344b998ff1ff5e939bb932321bec7caeddcc0597178cc
+  '3.23.0':
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-darwin-amd64
+    darwin-amd64: sha256:1ee4d1452bc66bd53f41d95034df71bbbfa1405aa1dc08c33965800d97629c84
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-darwin-arm64
+    darwin-arm64: sha256:4a1106052e545d0b8ac1c2e8f9e924e64b95246afcb497df0491ad3270e7d350
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-linux-amd64
+    linux-amd64: sha256:38106fdd581ab30dc835efeaf83a88b49b21484f8ad33afbefdaf3c49e007550
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-linux-arm64
+    linux-arm64: sha256:2afa5795c426faae1fdfd966249f8191929e43d2b94bea268fa9c7ab5a36f6b6
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-linux-armv7
+    linux-armv7: sha256:a92be0a01487980207710b98ac1e2a1d9fddfdb539dc13299428fba8e511edb5
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:8b4d40a4613cbc94540b1c7f3252b5924cb549085e73f49e4f84e7814bac7c06
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-linux-s390x
+    linux-s390x: sha256:8529822b57468403a17922855bd33cbbdf250b68157ce9a01642ea884b40a159
+    # https://github.com/projectcalico/calico/releases/download/v3.23.0/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:2868847c427b198a813250effdcf5acc8f63e713467e7655f385169a6e75184f
+  '3.23.1':
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-darwin-amd64
+    darwin-amd64: sha256:0d0f499b16d87292017fc7f5854773f61d00ad4122d692151acc7676ae7ff4ed
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-darwin-arm64
+    darwin-arm64: sha256:cc6dec5de2105db8ee428b699f72cc44a00b07e93731cde9e3a0bff501b0e98c
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-linux-amd64
+    linux-amd64: sha256:e8fd04d776df5571917512560800bf77f3cdf36ca864c9cae966cb74d62ba4fe
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-linux-arm64
+    linux-arm64: sha256:30f7e118c21ecba445b4fbb27f7ac8bc0d1525ab3c776641433e3b1a3388c65b
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-linux-armv7
+    linux-armv7: sha256:bbec5f133047c2daf8b69a06ce6000bc5a70958ecdeeff826ccd78eaeed1d4ba
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:ef5e9b413fbe32da09023cdafc2c3977627dd64a0abcfc68398d3b3923cdd8a6
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-linux-s390x
+    linux-s390x: sha256:0f10e2724a47a6674d64ca91d3a673a6c8430d88c369827444e238e148740bce
+    # https://github.com/projectcalico/calico/releases/download/v3.23.1/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:2fad2976d4d5960631873f41817379e6bf815855ceec0d45a6003b8ac5a75653
+  '3.23.2':
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-darwin-amd64
+    darwin-amd64: sha256:dbfe19d7743622bc72596413303d1c9f736e6e3220deb11f8df1fb258b706352
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-darwin-arm64
+    darwin-arm64: sha256:580e1734caadae766c30628683cd3b855e0ed3730faae463e3ede3285c9ac21a
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-linux-amd64
+    linux-amd64: sha256:3784200cdfc0106c9987df2048d219bb91147f0cc3fa365b36279ac82ea37c7a
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-linux-arm64
+    linux-arm64: sha256:232b992e6767c68c8c832cc7027a0d9aacb29901a9b5e8871e25baedbbb9c64c
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-linux-armv7
+    linux-armv7: sha256:f15a854125a0135a11d32247c09304c53ce694976d54f6f76243b62013d98c67
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:d9ded02381a0fc1311561d0cc9eed9ea827462f3b823593d6ac8bd0591d2020f
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-linux-s390x
+    linux-s390x: sha256:8617f7142ded52ec1df14c6545d1e8d67531bcf14a5df6cdecbe8130b09d240e
+    # https://github.com/projectcalico/calico/releases/download/v3.23.2/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:cfbc902d7ad7b68dba0db0c9030c91ead2dc6a61f8062c54868d536016336eac
