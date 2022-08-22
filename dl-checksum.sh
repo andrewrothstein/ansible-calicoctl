@@ -38,6 +38,4 @@ dl_ver() {
     dl $ver windows amd64 .exe
 }
 
-dl_ver 3.23.0
-dl_ver 3.23.1
-dl_ver ${1:-3.23.2}
+dl_ver ${1:-3.24.0}
