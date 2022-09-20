@@ -1,5 +1,7 @@
 ---
 # vars file for calicoctl
+calicoctl_os: '{{ ansible_system | lower }}'
+calicoctl_arch: '{{ calicoctl_arch_map[ansible_architecture] }}'
 calicoctl_platform: '{{ calicoctl_os }}-{{ calicoctl_arch }}'
 calicoctl_eff_suffix: '{{ calicoctl_exe_suffix | default("") }}'
 calicoctl_exe: calicoctl-{{ calicoctl_platform }}{{ calicoctl_eff_suffix }}
