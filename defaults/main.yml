@@ -1,9 +1,10 @@
 ---
 # defaults file for calicoctl
-calicoctl_ver: 3.25.0
+calicoctl_ver: 3.26.1
 calicoctl_mirror: https://github.com/projectcalico/calico/releases/download
 calicoctl_arch_map:
   aarch64: arm64
+  arm64: arm64
   armv7: armv7
   ppc64le: ppc64le
   s390x: s390x
@@ -179,3 +180,20 @@ calicoctl_checksums:
     linux-s390x: sha256:c666f4bed5e33fc133ae2d3e5fc4d4d880c11bf48b820b870605ead79358bd95
     # https://github.com/projectcalico/calico/releases/download/v3.25.0/calicoctl-windows-amd64.exe
     windows-amd64: sha256:0ad2c616ac0908c50f80d9a0b2b5d2f71c33df02332e095d4d0ffb04e09a35d8
+  '3.26.1':
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-darwin-amd64
+    darwin-amd64: sha256:ce01b387a3908354e7b0062fb047cc54822c7dd7ff1fbe3ce126ac1a30da6f70
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-darwin-arm64
+    darwin-arm64: sha256:bf19e30ad2388d13c9ca4ad27cf036d58ceb3920dab40efa8e74daa6335b1ee1
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-linux-amd64
+    linux-amd64: sha256:c8f61c1c8e2504410adaff4a7255c65785fe7805eebfd63340ccd3c472aa42cf
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-linux-arm64
+    linux-arm64: sha256:bba2fbdd6d2998bca144ae12c2675d65c4fbf51c0944d69b1b2f20e08cd14c22
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-linux-armv7
+    linux-armv7: sha256:e0083216053b5eb05d5d4ce641506c8cad62fac79ed96a05921a7410144ffb43
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-linux-ppc64le
+    linux-ppc64le: sha256:7f8baf18f4d7954b6f16b1ddcdadbc818cae2fe1f72137464ccc7b8e6fef03a0
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-linux-s390x
+    linux-s390x: sha256:348b5e96acc4be1364c2fd9cb492f7b3461c96f0adc7e6ddde28e37f2937b383
+    # https://github.com/projectcalico/calico/releases/download/v3.26.1/calicoctl-windows-amd64.exe
+    windows-amd64: sha256:ac8de53607ed5607025a9de35d2bacf2d4457f328838c096528c60ed8f28d878
