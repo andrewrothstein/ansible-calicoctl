@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -10,19 +10,19 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: downloading {{ calicoctl_url }} to {{ calicoctl_target }}
+- name: Downloading {{ calicoctl_url }} to {{ calicoctl_target }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ calicoctl_url }}'
     dest: '{{ calicoctl_target }}'
-    mode: 0755
+    mode: '755'
     checksum: '{{ calicoctl_checksum }}'
 
-- name: linking {{ calicoctl_link }} to {{ calicoctl_target }}
+- name: Linking {{ calicoctl_link }} to {{ calicoctl_target }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ calicoctl_target }}'
     dest: '{{ calicoctl_link }}'
     state: link
