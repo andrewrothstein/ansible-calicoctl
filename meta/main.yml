@@ -1,15 +1,19 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs calicoctl
   company: BlackRock
+  description: installs calicoctl
+  galaxy_tags:
+    - network
+    - sdn
   license: MIT
-  min_ansible_version: 2.0
+  min_ansible_version: '2.0'
+  namespace: andrewrothstein
   platforms:
     - name: Alpine
       versions:
         - all
-    - name: Archlinux
+    - name: ArchLinux
       versions:
         - all
     - name: Debian
@@ -18,17 +22,14 @@ galaxy_info:
         - bullseye
     - name: EL
       versions:
-        - 8
-        - 9
+        - '8'
+        - '9'
     - name: Fedora
       versions:
-        - 38
-        - 39
+        - '38'
+        - '39'
     - name: Ubuntu
       versions:
         - focal
         - jammy
-  galaxy_tags:
-    - network
-    - sdn
   role_name: calicoctl

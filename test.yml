@@ -1,4 +1,6 @@
 ---
 - hosts: all
-  roles:
-    - role: '{{ playbook_dir }}'
+  tasks:
+    - name: Installing calicoctl
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
