@@ -5,7 +5,7 @@ calicoctl_arch: '{{ calicoctl_arch_map[ansible_architecture] }}'
 calicoctl_platform: '{{ calicoctl_os }}-{{ calicoctl_arch }}'
 calicoctl_eff_suffix: '{{ calicoctl_exe_suffix | default("") }}'
 calicoctl_exe: calicoctl-{{ calicoctl_platform }}{{ calicoctl_eff_suffix }}
-calicoctl_ver_exe: calicoctl-{{calicoctl_platform}}-{{ calicoctl_ver }}{{ calicoctl_eff_suffix }}
+calicoctl_ver_exe: calicoctl-{{ calicoctl_platform }}-{{ calicoctl_ver }}{{ calicoctl_eff_suffix }}
 calicoctl_url: '{{ calicoctl_mirror }}/v{{ calicoctl_ver }}/{{ calicoctl_exe }}'
 calicoctl_target: '{{ calicoctl_install_dir }}/{{ calicoctl_ver_exe }}'
 calicoctl_link: '{{ calicoctl_install_dir }}/calicoctl'
