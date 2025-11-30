@@ -32,10 +32,30 @@ dl_ver() {
     dl $ver darwin arm64
     dl $ver linux amd64
     dl $ver linux arm64
-    dl $ver linux armv7
     dl $ver linux ppc64le
     dl $ver linux s390x
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-3.27.2}
+dl_ver 3.28.0
+dl_ver 3.28.1
+dl_ver 3.28.3
+dl_ver 3.28.4
+dl_ver 3.28.5
+dl_ver 3.29.0
+dl_ver 3.29.1
+dl_ver 3.29.2
+dl_ver 3.29.3
+dl_ver 3.29.4
+dl_ver 3.29.5
+dl_ver 3.29.6
+dl_ver 3.29.7
+dl_ver 3.30.0
+dl_ver 3.30.1
+dl_ver 3.30.2
+dl_ver 3.30.3
+dl_ver 3.30.4
+dl_ver 3.30.5
+dl_ver 3.31.0
+dl_ver 3.31.1
+dl_ver ${1:-3.31.2}
